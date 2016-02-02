@@ -12,12 +12,6 @@ class Tree(object):
     if tree.val == val:
       return True
     for child in tree.children:
-      if child.val == val or tree.contains(val, child): #oh JS, I miss you so - why can't I change the self binding here?
+      if child.val == val or tree.contains(val, child):
         return True
     return False
-
-# test = Tree('a')
-# test.addChild('b')
-# test.addChild('c')
-# test.children[0].addChild('d')
-# print(test.contains('d'))
